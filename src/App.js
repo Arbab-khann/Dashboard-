@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Dashboard } from "./component/Dashboard";
 import Products from "./component/Products";
 import Income from "./component/Income";
-import Help from "./component/Help";
+import Home from "./component/Help";
 import Coustomer from "./component/Coustomer";
 import Promote from "./component/Promote";
 import Sidebar from "./component/Sidebar";
@@ -19,7 +19,7 @@ function App() {
               <Route className="" path="/" element={<Dashboard />} />
               <Route path="/products" element={<Products />} />
               <Route path="income" element={<Income />} />
-              <Route path="help" element={<Help />} />
+              <Route path="help" element={<Home />} />
               <Route path="coustomer" element={<Coustomer />} />
               <Route path="promote" element={<Promote />} />
             </Routes>

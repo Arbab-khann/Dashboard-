@@ -22,13 +22,20 @@ function Dashboard() {
 
   return (
     <>
+      {/*  main container  */}
+
       <div className="dashboard-main-block">
+        {/* first block of name and search bar */}
+
         <div className="d-Block-1">
           <h3>hello Arbab 👋,</h3>
           <div>
-            <SearchBar onSearch={handleSearch} />
+            <SearchBar onSearch={handleSearch} />{" "}
+            {/* calling searchbar compo here for serach bar */}
           </div>
         </div>
+        {/* second block of cards */}
+
         <div className="d-block-2">
           <div className=" card card1">
             <div
@@ -107,17 +114,20 @@ function Dashboard() {
             </div>
           </div>
         </div>
+
+        {/*  third block of chart and coustomer */}
+
         <div className="d-block-3">
           <div className="chart-container">
             <div className="chart-container-block1">
               <h3>Overview</h3>
-              <select name="" class="option">
+              <select name="" className="option">
                 <option value="0">Quantity</option>
                 <option value="1">Price</option>
                 <option value="2">Service</option>
               </select>
             </div>
-            <Chart />
+            <Chart /> {/* calling cahrt to render chart in our third block */}
           </div>
           <div className="coustomer-container">
             <div className="coustomer-container-text">
@@ -126,9 +136,12 @@ function Dashboard() {
             </div>
             <div className="coustomer-container-ring">
               <CircularProgressBar percentage={70} />
+              {/* calling CircularProgressBar for circular bar */}
             </div>
           </div>
         </div>
+
+        {/* forth block of product sale */}
 
         <div className="d-block-4">
           <div className="d-block4-container1">
@@ -164,6 +177,9 @@ function Dashboard() {
             </div>
           </div>
           <hr></hr>
+
+          {/* using map method to render product sale items in below */}
+
           <div className="d-block4-container3">
             {data.map((item, index) => {
               return (

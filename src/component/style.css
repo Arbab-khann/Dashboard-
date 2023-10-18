@@ -4,6 +4,7 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+/* main container styling */
 
 .container {
   display: flex;
@@ -19,9 +20,15 @@ main {
   object-fit: contain;
   flex-direction: column;
 }
+
+/* side-bar of dashboard styling */
+
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 20%;
-  max-height: 100%;
+
   background-color: black;
   color: white;
   font-weight: 600;
@@ -29,33 +36,48 @@ main {
 .top-bar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+
   margin-left: 15px;
-  font-size: 21px;
-  gap: 10px;
+
+  justify-content: space-around;
+  padding: 20px 5px 20px 5px;
+  width: 80%;
+}
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 15px;
+  font-size: 0.8rem;
+  justify-content: space-between;
   padding: 20px 5px 40px 5px;
+  width: 80%;
 }
 .bottom-bar {
+  padding: 0.3rem;
   width: 80%;
+  height: auto;
   margin-left: 15px;
   background-color: rgb(80, 80, 173);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 120px;
+  margin-bottom: 2rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .bottom-bar-img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
 }
 .bottom-bar-img img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
+  width: 3rem;
+  height: 40%;
+  border-radius: 50%;
 }
 
 .bottom-bar-user-name {
@@ -75,7 +97,7 @@ main {
   font-size: 0.7rem;
 }
 .logo {
-  font-size: 32px;
+  font-size: 1.8rem;
 }
 .icon {
   font-size: 25px;
@@ -85,31 +107,37 @@ main {
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   color: white;
-  margin-left: 15px;
 }
-/* .link:hover {
-  background-color: rgb(91, 91, 165);
-} */
+
 .active {
   background-color: rgb(80, 80, 173);
-  width: 80%;
+  width: 99%;
 }
+
+/* dashboard main block style */
+
 .dashboard-main-block {
   border-radius: 5px;
   background-color: rgb(233, 238, 233);
   height: 100%;
   width: 100%;
 }
+
+/* first block of name and search bar */
+
 .d-Block-1 {
   height: 5%;
   display: flex;
-  margin: 5px 20px 10px 20px;
+  margin: 0px 20px 10px 20px;
   align-items: center;
   justify-content: space-between;
 }
+
+/* second block of cards */
+
 .d-block-2 {
   display: flex;
   flex-wrap: wrap;
@@ -156,6 +184,9 @@ main {
   width: 4rem;
   margin-left: 5px;
 }
+
+/* third block of chart and coustomer*/
+
 .d-block-3 {
   display: flex;
   flex-wrap: wrap;
@@ -245,6 +276,7 @@ main {
   margin-top: 10px;
   font-size: 10px;
 }
+/* forth block of product sale */
 
 .d-block-4 {
   display: flex;
@@ -319,6 +351,9 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+
+/* circle style of coustomer ring*/
+
 .progress-container {
   display: flex;
   position: relative;
@@ -364,10 +399,6 @@ main {
 }
 
 .percentage {
-  /* 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   font-weight: bold;
   position: absolute;
 }
@@ -375,9 +406,23 @@ main {
   font-family: sans-serif;
   text-align: center;
 }
-.Bars-chart {
-  border-radius: 20px;
+
+/* under construction rest components style */
+.buid-main-block {
+  display: flex;
+  object-fit: contain;
+  width: 100%;
+  height: 100vh;
+  /* border: 10px solid black; */
 }
+
+.buid-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* responsiveness for top card and Bar chart */
+
 @media (max-width: 1320px) {
   .chart-container-block1 {
     padding: 10px 15px 0px 15px;
@@ -477,6 +522,9 @@ main {
     margin-left: 15px;
   }
 }
+
+/* responsiveness for product sale */
+
 @media (max-width: 798px) {
   .d-block4-container1-block2,
   .d-block4-container1-right-block,
@@ -517,10 +565,20 @@ main {
     font-size: 0.6rem;
   }
   .d-block4-img {
-    margin-top: -30px !important;
+    margin-top: 0px !important;
   }
   .d-block4-name {
     font-size: 0.8rem !important;
+  }
+  .d-block4-container1-block1 p,
+  .d-block4-container1-block2 {
+    font-size: 0.7rem !important ;
+  }
+  .image-side-text {
+    margin-top: -6px;
+  }
+  .d-block4-products-right-block {
+    margin-top: -30px;
   }
   .d-block4-dec {
     font-size: 0.6rem !important;
@@ -530,5 +588,97 @@ main {
   }
   .d-block4-container2 {
     font-size: 0.9rem;
+  }
+}
+/* responsivness for sidebar */
+@media (max-width: 792px) {
+  .top-bar {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .header {
+    font-size: 1.1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .sidebar-items {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .name {
+    font-size: 0.8rem;
+  }
+  .link {
+    gap: 5px;
+  }
+  .icon svg {
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+}
+@media (max-width: 578px) {
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+  .header {
+    font-size: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .icon svg {
+    height: 0px;
+    width: 0px;
+    margin-left: 0px;
+  }
+  .name {
+    width: 100%;
+  }
+  .bottom-bar {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 488px) {
+  .name {
+    font-size: 0px;
+  }
+  .icon svg {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+  }
+  .header {
+    font-size: 0.9rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .header {
+    margin-left: -2px;
+    font-size: 0.8rem;
+  }
+  .bottom-bar {
+    margin-left: 7px;
+  }
+}
+/*top search bar styling */
+
+@media (max-width: 400px) {
+  .d-Block-1 {
+    display: flex;
+
+    flex-direction: column;
+  }
+  .search-bar {
+    margin-top: 10px !important;
+  }
+  .d-block-2 {
+    margin-top: 10px;
   }
 }

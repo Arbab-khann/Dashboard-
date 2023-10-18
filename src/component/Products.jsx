@@ -1,9 +1,11 @@
 import React from "react";
-
+import image from "../image/buid.jpg";
 function Products() {
   return (
     <div>
-      <h1> this is product</h1>
+      <div className="buid-main-block">
+        <img className="buid-image" src={image} alt="img" />
+      </div>
     </div>
   );
 }

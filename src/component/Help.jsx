@@ -1,9 +1,11 @@
 import React from "react";
-
+import image from "../image/buid.jpg";
 function Help() {
   return (
     <div>
-      <h1>Help</h1>
+      <div className="buid-main-block">
+        <img className="buid-image" src={image} alt="img" />
+      </div>
     </div>
   );
 }

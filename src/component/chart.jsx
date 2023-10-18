@@ -43,7 +43,7 @@ const data = [
   },
 ];
 
-export default function Chart() {
+function Chart() {
   const [activeIndex, setActiveIndex] = useState(0);
   //   const activeItem = data[activeIndex];
 
@@ -62,7 +62,7 @@ export default function Chart() {
           <Bar dataKey="uv" onClick={handleClick}>
             {data.map((entry, index) => (
               <>
-                <div>{data.name}</div>
+                <div key={index}>{data.name}</div>
                 <Cell
                   cursor="pointer"
                   fill={index === activeIndex ? " rgb(80, 80, 173)" : "#F1EFEF"}
@@ -87,7 +87,8 @@ export default function Chart() {
         <p>NOV</p>
         <p>DEC</p>
       </div>
-      {/* <p className="content">{`Uv of "${activeItem.name}": ${activeItem.uv}`}</p> */}
     </div>
   );
 }
+
+export default Chart;

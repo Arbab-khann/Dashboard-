@@ -20,7 +20,7 @@ function SaleIteams(props) {
       totalSale: "30",
     },
   ]);
-  console.log("datamaking file", typeof data);
+
   return (
     <>
       <Store.Provider value={[data, setdata]}>{props.children}</Store.Provider>

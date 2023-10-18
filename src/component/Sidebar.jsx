@@ -49,23 +49,27 @@ function Sidebar({ children }) {
   return (
     <div className="container">
       <div className="sidebar">
-        <div className="top-bar">
-          <div className="logo">
-            <FaRegMap />
+        <div className="sidebar-block1">
+          <div className="top-bar">
+            <div className="logo">
+              <FaRegMap />
+            </div>
+            <h3 className="header">Dashboard</h3>
           </div>
-          <h3 className="header">Dashboard</h3>
+          <div className="sidebar-items">
+            {menuitems.map((item, index) => (
+              <NavLink
+                to={item.path}
+                className="link"
+                activeclassName="active"
+                key={index}
+              >
+                <div className="icon">{item.icon}</div>
+                <div className="name">{item.name}</div>
+              </NavLink>
+            ))}
+          </div>
         </div>
-        {menuitems.map((item, index) => (
-          <NavLink
-            to={item.path}
-            className="link"
-            activeclassName="active"
-            key={index}
-          >
-            <div className="icon">{item.icon}</div>
-            <div className="name">{item.name}</div>
-          </NavLink>
-        ))}
         <div className="bottom-bar">
           <div className="bottom-bar-img">
             <img className="bottom-bar-user-image" src={img} alt="img"></img>

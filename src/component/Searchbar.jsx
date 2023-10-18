@@ -15,6 +15,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <form
+      className="search-bar"
       style={{
         display: "flex",
         background: "#FFFFFF",
