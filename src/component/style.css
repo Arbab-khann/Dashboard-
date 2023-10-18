@@ -666,6 +666,10 @@ main {
   .bottom-bar {
     margin-left: 7px;
   }
+  .d-block4-container1-block2 p,
+  p {
+    font-size: 0.6rem;
+  }
 }
 /*top search bar styling */
 

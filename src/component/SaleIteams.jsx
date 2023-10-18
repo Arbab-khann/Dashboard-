@@ -13,7 +13,7 @@ function SaleIteams(props) {
     },
     {
       img: "https://images.pexels.com/photos/1121123/pexels-photo-1121123.jpeg?auto=compress&cs=tinysrgb&w=600",
-      name: "illustrator sharpness",
+      name: "illustrator ",
       dec: "Enhancing Clarity and Precision  ",
       stock: "32 in stock",
       price: "$67",
